@@ -7,15 +7,15 @@ from django.utils.safestring import mark_safe
 @admin.register(Services)
 class ServicesAdmin(admin.ModelAdmin):
     list_display = ('name', 'description', 'sort')
-    list_editable = ('description', 'sort')
+    list_editable = ('sort',)
     search_fields = ('name',)
     list_filter = ('sort',)
 
 
 @admin.register(Portfolio)
 class PortfolioAdmin(admin.ModelAdmin):
-    list_display = ('id', 'image_src_tag', 'name', 'client', 'category', 'date', 'description', 'sort')
-    list_editable = ('category', 'description', 'sort')
+    list_display = ('image_src_tag', 'id', 'name', 'client', 'category', 'date', 'description', 'sort')
+    list_editable = ('sort',)
     search_fields = ('name', 'client')
     list_filter = ('sort',)
 
@@ -29,7 +29,7 @@ class PortfolioAdmin(admin.ModelAdmin):
 @admin.register(About)
 class AboutAdmin(admin.ModelAdmin):
     list_display = ('image_src_tag', 'name', 'date', 'description', 'sort')
-    list_editable = ('date', 'description', 'sort')
+    list_editable = ('sort',)
     search_fields = ('name', 'date')
     list_filter = ('sort',)
 
@@ -43,7 +43,7 @@ class AboutAdmin(admin.ModelAdmin):
 @admin.register(Team)
 class TeamAdmin(admin.ModelAdmin):
     list_display = ('image_src_tag', 'name', 'position', 'facebook', 'twitter', 'linkedin', 'sort')
-    list_editable = ('position', 'facebook', 'twitter', 'linkedin', 'sort')
+    list_editable = ('sort',)
     search_fields = ('name', 'position')
     list_filter = ('sort',)
 
@@ -57,7 +57,7 @@ class TeamAdmin(admin.ModelAdmin):
 @admin.register(Clients)
 class ClientsAdmin(admin.ModelAdmin):
     list_display = ('image_src_tag', 'name', 'link', 'sort')
-    list_editable = ('link', 'sort')
+    list_editable = ('sort',)
     search_fields = ('name',)
     list_filter = ('sort',)
 

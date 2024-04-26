@@ -23,32 +23,4 @@
             {% endfor %}
         </div>
     </div>
-
-    {% for item in portfolio %}
-    <div class="modal fade text-center portfolio-modal" role="dialog" tabindex="-1" id="portfolioModal{{ item.id }}">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <div class="modal-body">
-                                <h2 class="text-uppercase">{{ item.name }}</h2>
-                                <img class="img-fluid d-block mx-auto" src="{{ item.image_in.url }}">
-                                <p>{{ item.description }}</p>
-                                <ul class="list-unstyled">
-                                    <li>{{ item.date }}</li>
-                                    <li>{{ item.client }}</li>
-                                    <li>{{ item.category }}</li>
-                                </ul>
-                                <button class="btn btn-primary" type="button" data-bs-dismiss="modal">
-                                    <i class="fa fa-times"></i><span>&nbsp;Close Project</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    {% endfor %}
 </section>
