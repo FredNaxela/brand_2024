@@ -1,8 +1,10 @@
 from django.contrib import admin
-from .models import Team, About, Services, Portfolio, Clients
+from .models import Team, About, Services, Portfolio, Clients, Contact
 from django.utils.safestring import mark_safe
 
 # Register your models here.
+
+admin.site.register(Contact)
 
 @admin.register(Services)
 class ServicesAdmin(admin.ModelAdmin):
